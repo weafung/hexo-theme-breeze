@@ -1,0 +1,14 @@
+<section class="posts">
+    <article class="post">
+        <div class="post-title">
+            <a class="post-title-link" href="<%- url_for(page.path) %>"><%=page.title%></a>
+        </div>
+        <div class="post-meta">
+            <span class="post-author"><%- page.author %></span>
+            <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
+        </div>
+        <div class="post-content">
+            <%- page.content %>
+        </div>
+    </article>
+</section>

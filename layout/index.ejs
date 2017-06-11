@@ -1,0 +1,25 @@
+<section class="posts">
+    <% if (page.posts) { %>
+        <% page.posts.each(function(post) { %>
+            <article class="post">
+                <div class="post-title">
+                    <a class="post-title-link" href="<%- url_for(post.path) %>"><%=post.title%></a>
+                </div>
+                <div class="post-meta">
+                    <span class="post-author"><%- post.author %></span>
+                    <span class="post-time"><%- date(post.date, "YYYY-MM-DD") %></span>
+                </div>
+                <div class="post-content">
+                    <% if(post.excerpt){ %>
+                        <%- post.excerpt %>
+                    <% }else{ %>
+                        <%- post.content %>
+                    <% } %>
+                </div>
+            </article>
+        <% }) %>
+        <div class="page-nav">
+            <%- paginator({ total: Math.ceil(site.posts.length / config.per_page)}) %>
+        </div>
+    <% } %>
+</section>
