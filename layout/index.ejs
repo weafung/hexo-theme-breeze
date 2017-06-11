@@ -16,6 +16,9 @@
                         <%- post.content %>
                     <% } %>
                 </div>
+                <div class="post-read-more">
+                    <a class="post-read-more-link" href="<%- url_for(post.path) %>">阅读更多</a>
+                </div>
             </article>
         <% }) %>
         <div class="page-nav">

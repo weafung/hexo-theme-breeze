@@ -1,12 +1,13 @@
 ::-webkit-scrollbar  
 {  
     width: 6px;  
+    height: 6px;
     background-color: #F5F5F5;  
 }
 
 ::-webkit-scrollbar-thumb
 {
-  background-color: #555;
+    background-color: #555;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
 
 a {
 	text-decoration:none;
+    color: #555;
 }
 
 .header {
@@ -40,10 +42,6 @@ a {
 	margin-right: 50px;
 }
 
-.blog-menu-item a{
-	color: #555;
-}
-
 .blog-title {
     margin-top: 30px;
     margin-bottom: 0;
@@ -53,7 +51,6 @@ a {
 
 .blog-title a, .blog-title a:hover {
     color: rgba(80, 80, 80, 1);
-    text-decoration: none;
 }
 
 .footer {
@@ -64,81 +61,109 @@ a {
 }
 
 .blog-footer-container {
+    color: #afaaaa;
     padding-top: 15px;
     padding-bottom: 10px;
 } 
+
+.blog-copyright a {
+    border-bottom: 1px solid #555;
+}
+
+.blog-poweredby, .blog-theme-info {
+    color: #afaaaa;
+    display: inline;
+}
+
+.back-to-top {
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    right: 30px;
+    bottom: 15px;
+}
 
 pre, code {
   font-family: "PingFang SC", consolas, Menlo, "Microsoft YaHei", monospace;
 }
 
 code {
-  padding: 2px 4px;
-  word-wrap: break-word;
-  color: #555;
-  background: #eee;
-  border-radius: 3px;
-  font-size: 13px;
+    padding: 2px 4px;
+    word-wrap: break-word;
+    color: #555;
+    background: #eee;
+    border-radius: 3px;
+    font-size: 13px;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  empty-cells: show;
-  border: 1px solid #e2e2e2;
-  width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #e2e2e2;
+    width: 100%;
 }
 
 table th {
-  white-space: nowrap;
-  color: #444;
-  font-weight: 600;
-  background: #eee;
+    white-space: nowrap;
+    color: #444;
+    font-weight: 600;
+    background: #eee;
 }
 
 table td, table th {
-  border: 1px solid #e2e2e2;
-  padding: 8px 16px;
-  text-align: left;
-}
-
-.back-to-top {
-  width: 32px;
-  height: 32px;
-  position: fixed;
-  right: 30px;
-  bottom: 15px;
+    border: 1px solid #e2e2e2;
+    padding: 8px 16px;
+    text-align: left;
 }
 
 .posts {
-  margin-left: 25%;
-  margin-right: 25%;
-  
-  border: 1px solid #fafafa;
-  padding: 2px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 1px solid #fafafa;
+    padding: 2px;
 }
 
 .post {
-  margin-top: 30px;
-  margin-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #e2e2e2;
+    padding: 8px;
 }
 
 .post-title {
-  text-align: center;
+    margin-top: 12px;
+    text-align: center;
 }
 
 .post-title a {
-  font-size: 2em;
-  color: #555;
-  border-bottom:1px solid #555
+    font-size: 2em;
+    color: #555;
+    border-bottom:1px solid #555;
 }
 
 .post-meta {
-  color: #999;
-  text-align:center
-  padding-top: 15px;
+    color: #999;
+    text-align:center
+    padding-top: 15px;
 }
 
 .post-read-more {
-  
+    text-align: center;
+}
+
+.post-read-more a {
+    border-bottom: 1px solid #555;
+}
+
+.page-nav {
+    text-align: center;
+}
+
+.page-number {
+    padding: 16px;
+}
+
+.current {
+    color: #110000;
 }
