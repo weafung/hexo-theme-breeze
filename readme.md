@@ -2,6 +2,10 @@
 
 一个待完成的性冷淡向的Hexo主题
 
+## Demo
+
+[Demo For Breeze](https://weafung.github.io/)
+
 ## 安装
 
 ```
