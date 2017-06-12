@@ -1,0 +1,13 @@
+<div class="blog-archives-posts">
+<% page.posts.each(function(item){ %>
+	<div class="blog-archives-post">
+	    <%= item.date.format("MM-DD") %>
+	    <a href="<%- config.root %><%- item.path %>">
+	        <%- item.title || item.link%>
+	    </a> 
+	</div>
+<% }); %>
+</div>
+<div class="blog-archives-page-nav">
+    <%- paginator({ total: Math.ceil(site.posts.length / config.per_page)}) %>
+</div>
