@@ -1,8 +1,6 @@
 menu:
  首页: /
  归档: /archives
- 链接: /link
- 关于: /about
 
 highlight:
  theme: github
