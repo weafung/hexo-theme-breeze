@@ -4,7 +4,13 @@
             <a class="post-title-link" href="<%- url_for(page.path) %>"><%=page.title%></a>
         </div>
         <div class="post-meta">
-            <span class="post-author"><%- page.author %></span>
+            <span class="post-author">
+                <% if(page.author){ %>
+                    <%- page.author %>
+                <% }else{ %>
+                    <%- config.author %>
+                <% } %>
+            </span>
             <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
         </div>
         <div class="post-content">

@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <%-partial('_partial/head') %>
-  <body>
-    <%-partial('_partial/header') %>
-    <main class="main">
-      <%-body%>
-    </main>
-    <%-partial('_partial/footer') %>
-    <a href="#top" class="back-to-top" id="back-to-top"><img src="/img/top.png" width="32px" height="32px"></a>
-    <script type="text/javascript">
-      var changeWithScreenSize = function() {
-        if (document.documentElement.clientHeight >= document.documentElement.offsetHeight) { // no scroll
-          document.getElementById('footer').style.position =  "absolute";
-          document.getElementById('back-to-top').style.display = "none";
-        } else {
-          document.getElementById('footer').style.position =  "relative";
-          document.getElementById('back-to-top').style.display = "";
-        }
-      }
-      window.onresize = function() {
-          changeWithScreenSize();
-      }
-      window.onload = function() {
-          changeWithScreenSize();
-      }
-    </script>
-  </body>
+    <%-partial('_partial/head') %>
+    <body>
+        <%-partial('_partial/header') %>
+        <main class="main">
+            <%-body%>
+        </main>
+        <%-partial('_partial/footer') %>
+        <a href="#top" class="back-to-top" id="back-to-top"><img src="/img/top.png" width="32px" height="32px"></a>
+        <script type="text/javascript">
+            var changeWithScreenSize = function() {
+                if (document.documentElement.clientHeight >= document.documentElement.offsetHeight) { // no scroll
+                    document.getElementById('footer').style.position =    "absolute";
+                    document.getElementById('back-to-top').style.display = "none";
+                } else {
+                    document.getElementById('footer').style.position =    "relative";
+                    document.getElementById('back-to-top').style.display = "";
+                }
+            }
+            window.onresize = function() {
+                changeWithScreenSize();
+            }
+            window.onload = function() {
+                changeWithScreenSize();
+            }
+        </script>
+    </body>
 </html>
