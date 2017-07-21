@@ -33,10 +33,9 @@
                 counter.save({
                     title: title,
                     url: url,
-                    useragent: navigator.userAgent,
                     times: 1
                 }).then(function(object) {
-                    console.log('LeanCloud Rocks!');
+                    console.log("Hello! Nice to meet you~");
                 });
             } else {
                 const id = results[0].id;
