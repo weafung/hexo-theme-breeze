@@ -14,3 +14,41 @@
 </footer>
 <script>hljs.initHighlightingOnLoad();</script>
 <script type="text/javascript" src="/js/main.js"></script>
+<!--post counter part-->
+<% if(theme.leancloud.enable == true){ %>
+<script>
+    const APP_ID = '<%= theme.leancloud.app_id %>';
+    const APP_KEY = '<%= theme.leancloud.app_key %>';
+    AV.init({ appId: APP_ID, appKey: APP_KEY });
+    let Counter = AV.Object.extend('Counter');
+    const isPostPage = document.getElementsByClassName('post-flag').length == 1;
+    if (isPostPage) {
+        let title = document.getElementsByClassName('post-title-link')[0].text;
+        let url = document.getElementsByClassName('post-title-link')[0].pathname;
+        var query = new AV.Query('Counter');
+        query.equalTo('url', url);
+        query.find().then(function (results) {
+            if (results.length == 0) {
+                let counter = new Counter();
+                counter.save({
+                    title: title,
+                    url: url,
+                    useragent: navigator.userAgent,
+                    times: 1
+                }).then(function(object) {
+                    console.log('LeanCloud Rocks!');
+                });
+            } else {
+                const id = results[0].id;
+                newTimes = results[0].attributes.times + 1;
+                let counter = AV.Object.createWithoutData('Counter', id);
+                counter.set('times', newTimes);
+                counter.save();
+            }
+        }, function (error) {
+            console.log(error)
+        });
+    }
+</script>
+<% } %>
+<!--post counter end-->
