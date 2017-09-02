@@ -11,8 +11,21 @@
                 <% }else{ %>
                     <%- config.author %>
                 <% } %>
+                &nbsp;&nbsp;&nbsp;&nbsp;
             </span>
             <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
+            <br/>
+            <span class="post-tags">
+                <% if ((page.tags) && (page.tags.length > 0)) { %>
+                    
+                    <%- list_tags(page.tags, {
+                        show_count: 0,
+                        style: 'none',
+                        class: '',
+                        separator: '、'
+                    }) %>
+                <% } %>
+            </span>
         </div>
         <div class="post-content">
             <%- page.content %>

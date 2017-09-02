@@ -1,6 +1,7 @@
 menu:
  首页: /
  归档: /archives
+ 友链: /friends-link
 
 highlight:
  theme: github

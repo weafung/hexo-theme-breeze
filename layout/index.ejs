@@ -12,8 +12,21 @@
                         <% }else{ %>
                             <%- config.author %>
                         <% } %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
                     </span>
                     <span class="post-time"><%- date(post.date, "YYYY-MM-DD") %></span>
+                    <br/>
+                    <span class="post-tags">
+                        <% if ((post.tags) && (post.tags.length > 0)) { %>
+                            
+                            <%- list_tags(post.tags, {
+                                show_count: 0,
+                                style: 'none',
+                                class: '',
+                                separator: '、'
+                            }) %>
+                        <% } %>
+                    </span>
                 </div>
                 <div class="post-content">
                     <% if(post.excerpt){ %>
